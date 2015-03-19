@@ -33,7 +33,7 @@
 /**
  * Success and failure handlers are used for UI updates only. Always handle product purchases with startupWithTransactionHandler
  */
--(void)buyProductWithIdentifier:(NSString *)productIdentifier quantity:(NSInteger)quantity success:(void(^)(SKProduct *product))success failure:(void(^)(NSError *error))failure;
+-(void)purchaseProductWithIdentifier:(NSString *)productIdentifier quantity:(NSInteger)quantity success:(void(^)(SKProduct *product))success failure:(void(^)(NSError *error))failure;
 
 -(void)restoreCompletedTransactionsWithSuccess:(void(^)(void))success failure:(void(^)(NSError *error))failure;
 

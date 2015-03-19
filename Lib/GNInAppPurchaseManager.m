@@ -98,7 +98,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(GNInAppPurchaseManager, sharedI
 
 #pragma mark - Payments
 
--(void)buyProductWithIdentifier:(NSString *)productIdentifier quantity:(NSInteger)quantity success:(void(^)(SKProduct *product))success failure:(void(^)(NSError *error))failure{
+-(void)purchaseProductWithIdentifier:(NSString *)productIdentifier quantity:(NSInteger)quantity success:(void(^)(SKProduct *product))success failure:(void(^)(NSError *error))failure{
     [self loadProductWithIdentifier:productIdentifier success:^(SKProduct *product) {
         GNInAppPurchasePayment *payment = [[GNInAppPurchasePayment alloc] initWithProduct:product quantity:quantity];
         __weak GNInAppPurchasePayment *weakPayment = payment;

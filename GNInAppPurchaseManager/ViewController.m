@@ -37,7 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)purchase:(id)sender {
-    [[GNInAppPurchaseManager sharedInstance] buyProductWithIdentifier:self.textField.text quantity:1 success:^(SKProduct *product) {
+    [[GNInAppPurchaseManager sharedInstance] purchaseProductWithIdentifier:self.textField.text quantity:1 success:^(SKProduct *product) {
         [self updateLabelSuccessText:@"Purchased!"];
         [[[UIAlertView alloc] initWithTitle:@"Thanks, You just bought" message:[product.localizedTitle stringByAppendingFormat:@"\n%@",product.localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     } failure:^(NSError *error) {
