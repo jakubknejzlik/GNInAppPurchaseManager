@@ -32,7 +32,7 @@
 -(void)storeDate:(NSDate *)date quantity:(NSInteger)quantity productIdentifier:(NSString *)productIdentifier{
     [self.lockbox setDate:date forKey:[productIdentifier stringByAppendingString:@"-date"]];
     NSInteger total = [[self.lockbox stringForKey:[productIdentifier stringByAppendingString:@"-total"]] integerValue] + quantity;
-    [self.lockbox setString:[NSString stringWithFormat:@"%d",total] forKey:[productIdentifier stringByAppendingString:@"-total"]];
+    [self.lockbox setString:[NSString stringWithFormat:@"%i",(int)total] forKey:[productIdentifier stringByAppendingString:@"-total"]];
 }
 
 -(NSDate *)latestDateForProductIdentifier:(NSString *)productIdentifer{
