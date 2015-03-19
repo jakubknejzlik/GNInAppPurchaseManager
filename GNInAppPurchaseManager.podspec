@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GNInAppPurchaseManager"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "StoreKit wrapper with convinient block functions."
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
 
-  s.ios.deployment_target = "7.1"
+  s.ios.deployment_target = "6.0"
   # s.osx.deployment_target = "10.7"
 
 
