@@ -51,7 +51,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(GNInAppPurchaseManager, sharedI
 
 
 
--(void)startupWithTransactionHandler:(void(^)(NSString *productIdentifier,void(^finishHandler)(void)))transactionHandler{
+-(void)setupWithTransactionHandler:(void(^)(NSString *productIdentifier,void(^finishHandler)(void)))transactionHandler{
     self.transactionHandler = transactionHandler;
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 }

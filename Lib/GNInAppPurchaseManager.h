@@ -25,7 +25,7 @@
 -(NSDate *)latestProductPurchaseDate:(NSString *)productIdentifier;
 -(NSInteger)totalProductPurchases:(NSString *)productIdentifier;
 
--(void)startupWithTransactionHandler:(void(^)(NSString *productIdentifier,void(^finishHandler)(void)))transactionHandler;
+-(void)setupWithTransactionHandler:(void(^)(NSString *productIdentifier,void(^finishHandler)(void)))transactionHandler;
 
 -(void)loadProductWithIdentifier:(NSString *)productIdentifier success:(void(^)(SKProduct *product))success failure:(void(^)(NSError *error))failure;
 -(void)loadProductsWithIdentifiers:(NSSet *)productIdentifiers success:(void(^)(NSArray *products))success failure:(void(^)(NSError *error))failure;

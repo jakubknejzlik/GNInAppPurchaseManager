@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[GNInAppPurchaseManager sharedInstance] startupWithTransactionHandler:^(NSString *productIdentifier,void(^finishCallback)(void)) {
+    [[GNInAppPurchaseManager sharedInstance] setupWithTransactionHandler:^(NSString *productIdentifier,void(^finishCallback)(void)) {
         NSLog(@"handle transaction with product %@",productIdentifier);
         finishCallback();
     }];

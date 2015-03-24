@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GNInAppPurchaseManager"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "StoreKit wrapper with convinient block functions."
 
   s.description  = <<-DESC
